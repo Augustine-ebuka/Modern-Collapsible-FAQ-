@@ -1,0 +1,66 @@
+body{
+    background: url('./back.jpg') no-repeat center  center/cover;
+    height: 100vh;
+    position:absolute;
+}
+.accordion{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: azure;
+    width: 65%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;  
+}
+.accordion .header{
+    text-align: center;
+    font-size: larger;
+
+}
+.accordion .content .question{
+    font-size: 22px;
+    padding: 18px 0px;
+    margin: 5px;
+    padding: 10px;
+    margin: 5px;
+    border-bottom:1px black solid ;
+    cursor: pointer;
+
+}
+.accordion .content .question::after{
+    content: '+';
+    float: right;
+    position: relative;
+}
+.accordion .content .answer{
+    font-size: 18px;
+    padding-left: 10px;
+    line-height: 1.5;
+    width: 100%;
+    position: relative;
+
+   height: 0px;
+   overflow: hidden;
+   transition: .5s;
+}
+
+/**
+afetr adding javascript link
+
+*/
+.accordion .content.active .answer{
+    height: 100px;
+}
+.accordion .content.active .question{
+    font-size: 18px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.accordion .content.active .question::after{
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
+}
